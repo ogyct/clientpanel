@@ -22,7 +22,7 @@
           name="firstName"
           #clientFirstName="ngModel"
           [ngClass]="{'is-invalid':clientFirstName.errors && clientFirstName.touched}"
-          [(ngModel)]="firstName"
+          [(ngModel)]="client.firstName"
           minlength="2"
           required
         >
@@ -44,7 +44,7 @@
           name="lastName"
           #clientLastName="ngModel"
           [ngClass]="{'is-invalid':clientLastName.errors && clientLastName.touched}"
-          [(ngModel)]="lastName"
+          [(ngModel)]="client.lastName"
           minlength="2"
           required
         >
@@ -66,7 +66,7 @@
           name="email"
           #clientEmail="ngModel"
           [ngClass]="{'is-invalid':clientEmail.errors && clientLastName.touched}"
-          [(ngModel)]="email"
+          [(ngModel)]="client.email"
           pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
           required
         >
@@ -88,7 +88,7 @@
           name="phone"
           #clientPhone="ngModel"
           [ngClass]="{'is-invalid':clientPhone.errors && clientPhone.touched}"
-          [(ngModel)]="phone"
+          [(ngModel)]="client.phone"
           minlength="10"
           required
         >
@@ -97,7 +97,7 @@
           Phone required
         </div>
 
-        <div [hidden]="!clientPhone.errors?.minLength" class="invalid-feedback">
+        <div [hidden]="!clientPhone.errors?.minlength" class="invalid-feedback">
           Phone is not valid
         </div>
       </div>
